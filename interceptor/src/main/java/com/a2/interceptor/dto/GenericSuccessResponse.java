@@ -1,21 +1,12 @@
 package com.a2.interceptor.dto;
 
-import org.springframework.http.HttpStatus;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
+public class GenericSuccessResponse<T> {
+    private T data;
+    private String message;
 
-public class GenericSuccessResponse<T> extends GenericResponse<T> {
-    final public T data;
-    final public String message;
-
-    public GenericSuccessResponse(T data, String message) {
-        super(HttpStatus.OK);
-        this.data = data;
-        this.message = message;
-    }
-
-    public GenericSuccessResponse(String message) {
-        super(HttpStatus.OK);
-        this.data = null;
-        this.message = message;
-    }
 }

@@ -1,14 +1,14 @@
 package com.a2.interceptor.dto;
 
 
-import org.springframework.http.HttpStatusCode;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 
-public class GenericErrorResponse extends GenericResponse<String> {
+@Data
+@AllArgsConstructor
+public class GenericErrorResponse{
     final public String error;
 
-    public GenericErrorResponse(String error, HttpStatusCode status) {
-        super(status);
-        this.error=error;
-    }
+
 }

@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Data
 @Builder
-@NoArgsConstructor
+@Data
+
 @AllArgsConstructor
+@NoArgsConstructor
 public class InterceptAdminResponse {
     private int id;
 
