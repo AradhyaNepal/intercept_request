@@ -17,12 +17,12 @@ public class InterceptorController {
 
     final private InterceptService service;
 
-    @PostMapping(value="/t")
+    @PostMapping()
     public GenericSuccessEntity<InterceptMobileResponse> addRequest(@RequestBody @Valid InterceptRequest request) {
         return new GenericSuccessEntity<>(service.addMobile(request), SuccessConstants.interceptRequestFetchSuccess);
     }
 
-    @GetMapping(value="/ t/{id}")
+    @GetMapping(value="{id}")
     public GenericSuccessEntity<InterceptAdminResponse> getById(@PathVariable("id") String id) {
         int interceptId;
         try {
