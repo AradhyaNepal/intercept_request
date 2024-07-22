@@ -21,7 +21,7 @@ public class InterceptService {
 
     }
 
-    public InterceptAdminResponse getById(String id) {
+    public InterceptAdminResponse getById(int id) {
         var data = repository.findById(id);
         if (data.isEmpty()) {
             throw new CustomException("Invalid id");
