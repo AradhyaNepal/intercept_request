@@ -18,4 +18,13 @@ public class InterceptRequest {
     @NotEmpty(message = ValidationConstants.interceptorStatusCodeEmpty)
     private String statusCode;
 
+    @NotEmpty(message = ValidationConstants.interceptorDeviceIdEmpty)
+    private String deviceId;
+
+    @NotEmpty(message = ValidationConstants.interceptorDeviceNameEmpty)
+    private String deviceName;
+
+    @NotEmpty(message = ValidationConstants.interceptorProductCodeEmpty)
+    private String productCode;
+
 }
